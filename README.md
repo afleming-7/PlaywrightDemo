@@ -1,6 +1,4 @@
-# spriteCloud
-
-Programming test for spriteCloud.
+# PlaywrightDemo
 
 ---
 
@@ -33,8 +31,8 @@ Tests are implemented in **JavaScript/TypeScript** using **Playwright**, with a 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/afleming-7/spriteCloud.git
-   cd spriteCloud
+   git clone https://github.com/afleming-7/PlaywrightDemo.git
+   cd PlaywrightDemo
    ```
 
 2. **Install dependencies:**
@@ -74,12 +72,12 @@ Tests are implemented in **JavaScript/TypeScript** using **Playwright**, with a 
 ## Project Structure
 
 ```
-spriteCloud/
+PlaywrightDemo/
 ├── tests/
 │   ├── ui/                      # UI test specs
 │   └── api/                     # API test specs
 ├── tests-cucumber/              # Demo Cucumber feature files and steps
-│   ├── features/                # .feature files
+│   ├── features/                # Feature files
 │   ├── steps/                   # Step definitions
 │   └── support/                 # Hooks (page/browser setup)
 ├── pages/                       # Page Object Model classes
@@ -126,7 +124,7 @@ spriteCloud/
    npm run test:api
    ```
 
-5. **Run Cucumber demo tests only:**
+5. **Run Cucumber demo tests only (generates html report):**
 
    ```bash
    npm run test:cucumber
@@ -139,29 +137,23 @@ spriteCloud/
    npm run test:firefox
    ```
 
-7. **Generate reports:**
+7. **Generate Allure reports:**
 
    ```bash
    npm run report:allure
    ```
 
-8. **Generate reports for cucumber:**
-
-   ```bash
-   npm run report:cucumber
-   ```
-
-9. **Clean reports folder:**
+8. **Clean reports folder:**
 
    ```bash
    npm run clean:reports
    ```
 
-10. **Runs Typescript Verification:**
+9. **Runs Typescript Verification:**
 
-    ```bash
-    npm run typecheck
-    ```
+   ```bash
+   npm run typecheck
+   ```
 
 ---
 
