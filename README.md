@@ -1,5 +1,6 @@
 # PlaywrightDemo
 
+IMPORTANT NOTE: Some API tests no longer pass due to changes to the mock website which prevent programmatic updates
 ---
 
 # SauceDemo & ReqRes Automation Tests
