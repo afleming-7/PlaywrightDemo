@@ -2,7 +2,7 @@ import { test, expect, APIRequestContext, APIResponse } from "@playwright/test";
 import { createApiContext, API_BASE } from "../../utils/APIClient";
 
 test("@API Delayed request (max 3s)", async () => {
-  const context: APIRequestContext = await createApiContext();
+  const context: APIRequestContext = await createApiContext(true);
   const start: number = Date.now();
 
   const response: APIResponse = await context.get(`${API_BASE}/users?delay=3`);

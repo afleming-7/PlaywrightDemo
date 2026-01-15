@@ -4,7 +4,10 @@ import { createApiContext, API_BASE } from "../../utils/APIClient.js";
 test("@API Perform a successful login", async () => {
   const context: APIRequestContext = await createApiContext();
   const response: APIResponse = await context.post(`${API_BASE}/login`, {
-    data: { email: "eve.holt@reqres.in", password: "cityslicka" },
+    data: {
+      email: process.env.API_USERNAME || "eve.holt@reqres.in",
+      password: process.env.API_PASSWORD || "cityslicka",
+    },
   });
 
   expect(response.status()).toBe(200);

@@ -2,7 +2,7 @@ import { test, expect, APIRequestContext, APIResponse } from "@playwright/test";
 import { createApiContext, API_BASE } from "../../utils/APIClient.js";
 
 test("@API Perform an update", async () => {
-  const context: APIRequestContext = await createApiContext();
+  const context: APIRequestContext = await createApiContext(true);
   const response: APIResponse = await context.put(`${API_BASE}/users/2`, {
     data: { name: "Gandolf", job: "White Wizard" },
   });

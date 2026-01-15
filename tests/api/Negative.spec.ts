@@ -4,7 +4,7 @@ import { createApiContext, API_BASE } from "../../utils/APIClient.js";
 test.describe.configure({ mode: "parallel" });
 
 test("@API Negative: get non-existing user", async () => {
-  const context: APIRequestContext = await createApiContext();
+  const context: APIRequestContext = await createApiContext(true);
   const response: APIResponse = await context.get(`${API_BASE}/users/23`);
 
   expect([404, 401]).toContain(response.status());
@@ -13,7 +13,7 @@ test("@API Negative: get non-existing user", async () => {
 });
 
 test("@API Negative: login fails without password", async () => {
-  const context: APIRequestContext = await createApiContext();
+  const context: APIRequestContext = await createApiContext(true);
   const response: APIResponse = await context.post(`${API_BASE}/login`, {
     data: { email: "eve.holt@reqres.in" },
   });
